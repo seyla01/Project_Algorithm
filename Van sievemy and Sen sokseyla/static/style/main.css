@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(224, 238, 251);
+}
+
+.header {
+  background: rgb(179, 212, 246);
+  display: flex;
+  height: 100px;
+}
+
+.image img {
+  width: 150px;
+  padding-left: 90px;
+  position: relative;
+  bottom: 30px;
+}
+
+.header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 200px;
+
+}
+
+.all {
+  background: whitesmoke;
+  width: 60%;
+  /* height: 500px; */
+  margin-left: 250px;
+  margin-top: 50px;
+  padding: 0px 60px;
+}
+
+.all h1 {
+  color: rgb(102, 102, 209);
+  text-align: center;
+  padding-top: 15px;
+}
+
+.all p {
+  padding-top: 20px;
+}
+
+.benefits-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.card {
+  background: #e6f3ff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #0073e6;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background: rgb(179, 212, 246);
+  height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.list-btn {
+  gap: 50px;
+  padding-top: 30px;
+  padding-left: 615px;
+
+  
+
+
+}
+
+.btn {
+  padding: 8px;
+  border-radius: 4px;
+  margin: 0px 10px;
+
+}
+
+.btn a {
+  text-decoration: none;
+
+
+
+}

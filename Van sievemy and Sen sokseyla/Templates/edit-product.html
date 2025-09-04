@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <title>Edit student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/main1.css') }}">
+</head>
+
+<body class="form-container">
+    <div class="form-box">
+        <h2>Edit products</h2>
+        <form method="POST" action="{{ url_for('add_product') }}">
+             <input type="hidden" id="id" name="id" value="{{product[0]}}">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" name="name" value="{{product[1]}}" placeholder="Enter Product name" required>
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price" value="{{product[2]}}" placeholder="Enter Price" required>
+            <label for="quantity">Quantity</label>
+            <input type="text" id="quantity" name="quantity" value="{{product[3]}}" placeholder="Enter Quantity" required>
+
+            <button class="btn form-btn" type="submit">Update Product</button>
+        </form>
+        <button class="back">
+        <a href="{{ url_for('list_product') }}" class="back-link">Back to product List</a>
+
+        </button>
+        <!-- <a href="/li" class="back-link">← Back to Product List</a> -->
+
+
+    </div>
+</body>
+
+</html>

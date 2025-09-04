@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <form method="POST">
+        <div class="info">
+            <div class="container">
+                <h2 class="text">Product Details</h2>
+                <div class="info_card">
+                    <div class="laptop_detail">
+                        <div class="lap_img">
+                            <img src="../static/images/ROG-laptops-2019-1.jpg">
+                        </div>
+                        <p><strong>Name:</strong> {{ products[1] }}</p>
+                        <p><strong>Model:</strong> {{ products[2] }}</p>
+                        <p><strong>Price:</strong> ${{ products[3] }}</p>
+                        <p><strong>Quantity:</strong> {{ products[4] }}</p>
+                    </div>
+                    <div class="papa_p">
+                        <p class="para">The ASUS TUF line, short for "The Ultimate Force," is a series of affordable,
+                            durable, and high-performance gaming hardware. While most commonly known for
+                            its gaming laptops, the TUF lineup includes a wide range of PC components and
+                            peripherals. It is ASUS's mid-range gaming series. </p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="btn delete mg">
+                        <a href="/list-products" class="btn btn-primary">Back to List</a>
+                    </button>
+                    <button class="btn Check mg">
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

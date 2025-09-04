@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* background-color: antiquewhite; */
+    background: rgb(179, 212, 246);
+
+    height: 100px;
+    width: 100%;
+}
+
+.Column img {
+
+    width: 150px;
+    position: relative;
+    bottom: 20px;
+    left: 90px;
+}
+
+.contaner {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 420px;
+}
+
+.Image {
+    margin: 20px 100px;
+    display: flex;
+}
+
+.Paragrap {
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.add button {
+    height: 30x;
+    background-color: #4c61af;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+p {
+    margin: 20px;
+}
+
+.list-btn {
+    display: flex;
+    justify-content: end;
+    justify-content: end;
+    position: relative;
+    bottom: 120px;
+    gap: 10px;
+    right: 50px;
+
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    position: relative;
+    bottom: 120px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+/* .list-btn {
+    position: relative;
+    gap: 20px;
+    right: 500px;
+    bottom: 125px;
+
+} */
+
+.btn {
+    padding: 8px;
+    border-radius: 4px;
+    /* text-decoration: none; */
+
+}
+
+.btn a {
+    text-decoration: none;
+
+
+}
+
+.footer {
+    background: rgb(179, 212, 246);
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}

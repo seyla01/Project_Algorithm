@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+h2 {
+    /* background: teal; */
+    background:rgb(141, 187, 230);
+
+    color: white;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+p {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  th {
+    /* background-color: rgba(0, 128, 128, 0.603); */
+    background:rgb(224, 238, 251);
+
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  tr:hover {
+    background-color: #e2f5e9;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+.list-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.btn {
+    padding: 4px 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+    color: white;
+    background: teal;
+    /* background:rgb(224, 238, 251); */
+
+}
+.btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+
+}
+.align-right{
+    align-self: end;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.Edit{
+    background: rgb(189, 244, 189);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 5px;
+    color: black;
+
+}
+.Delete{
+    background: rgb(255, 99, 71);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+
+}
+.ction-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+
