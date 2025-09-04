@@ -1,128 +1,258 @@
 * {
     margin: 0;
     padding: 0;
-}
-body{
-    background-color: rgb(245, 236, 225);
-    
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
+body {
+    background: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------------- HEADER ---------------- */
 header {
-    background-color: rgb(238, 234, 230);
-    /* background: rgb(179, 212, 246); */
-
-    height: 100px;
-    width: 100%;
-    box-shadow: 0px 0px 4px rgb(102, 94, 94);
-
-}
-
-.Column img {
-
-    width: 150px;
-    position: relative;
-    bottom: 20px;
-    left: 90px;
-}
-
-.contaner {
     display: flex;
-    /* background-color: rgb(255, 255, 255); */
-    height: 420px;
-}
-
-.Image img {
-    width: 400px;
-    height: 400px;
-    margin-left:100%;
-    position: relative;
-    bottom: 265px;
-    left: 350px;
-
-
-
-
-}
-
-.Paragrap {
-     text-align: center; 
-    align-content: center;
-    padding: 20px;
-    font-size: 14px; 
-    /* color: rgb(15, 165, 15); */
-}
-
-.add button {
-    height: 30x;
-    background-color: #4c61af;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-
-p {
-    margin: 20px;
-}
-
-.list-btn {
-    display: flex;
-    justify-content: end;
-    justify-content: end;
-    position: relative;
-    bottom: 120px;
-    gap: 10px;
-    right: 50px;
-
-}
-
-h1 {
-    text-align: center;
-    color: black;
-    position: relative;
-    bottom: 120px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-/* .list-btn {
-    position: relative;
-    gap: 20px;
-    right: 500px;
-    bottom: 125px;
-
-} */
-
-.btn {
-    padding: 8px;
-    border-radius: 4px;
-    /* text-decoration: none; */
-
-}
-
-.btn a {
-    text-decoration: none;
-
-
-}
-
-.footer {
-    background: rgb(179, 212, 246);
-    height: 150px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-
+    background: #fff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-.text{
-    font-family: serif ;
-    color:green;
-    padding-left: 300px;
-    margin-top: 50px;
+
+header img {
+    height: 60px;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+    /* orange accent */
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 40px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Left text content */
+.paragraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 60px 150px;
+}
+
+.text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.paragraph p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.shop {
+    background: #e67e22;
+    color: #fff;
+}
+
+.shop:hover {
+    background: #d35400;
+}
+
+.order {
+    background: transparent;
+    border: 2px solid #e67e22;
+    color: #e67e22;
+}
+
+.order:hover {
+    background: #e67e22;
+    color: #fff;
+}
+
+/* Right image */
+.image img {
+    max-width: 300px;
+    width: 100%;
+    /* border-radius: 20px; */
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+}
+
+
+/* Example card style */
+.all-card .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.all-card .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.all-card img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.all-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.all-card p {
+    color: #777;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.all-card .price {
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.all-card button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.all-card button:hover {
+    background: #d35400;
+}
+/* ---------------- PRODUCT CARDS ---------------- */
+.all-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 25px;
+    padding: 60px 40px;
+}
+
+/* Card style */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.card p {
+    color: #777;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.card .price {
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+/* Card button */
+.card button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #d35400;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 992px) {
+    .all-card {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .all-card {
+        grid-template-columns: 1fr; /* 1 per row */
+    }
 }
