@@ -29,6 +29,10 @@
                     <option value="{{ b }}" {% if request.args.get('brand')==b %}selected{% endif %}>{{ b }}</option>
                     {% endfor %}
                 </select>
+                <select name="sort">
+                    <option value="new" {% if sort == "new" %}selected{% endif %}>Newest first</option>
+                    <option value="old" {% if sort == "old" %}selected{% endif %}>Oldest first</option>
+                </select>
 
                 <button type="submit">Search</button>
             </form>
