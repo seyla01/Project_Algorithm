@@ -101,8 +101,10 @@ def delete_product(product_id):
     return redirect(url_for('list_product'))
 @app.route("/list-products", methods=["GET"])
 def list_products():
-    search_query = request.args.get("q")   # get search term
-    selected_brand = request.args.get("brand")  # get selected brand
+    # Get parameters from query string
+    search_query = request.args.get("q", "")       # search by name
+    selected_brand = request.args.get("brand", "All")  # filter by brand
+    sort = request.args.get("sort", "new")         # sort (new, old, etc.)
 
     cur = mysql.connection.cursor()
 
@@ -113,30 +115,83 @@ def list_products():
     # Filter by product name (case-insensitive)
     if search_query:
         sql += " AND LOWER(name) LIKE %s"
-        params.append("%" + search_query + "%")
+        params.append("%" + search_query.lower() + "%")
 
     # Filter by brand
-    if selected_brand and  selected_brand != "All":
+    if selected_brand and selected_brand != "All":
         sql += " AND brand = %s"
         params.append(selected_brand)
 
-    sql += " ORDER BY product_id DESC"
+    # Sorting
+    if sort == "new":
+        sql += " ORDER BY product_id DESC"
+    elif sort == "old":
+        sql += " ORDER BY product_id ASC"
+    else:
+        sql += " ORDER BY product_id DESC"  # default newest
+
     cur.execute(sql, tuple(params))
     products = cur.fetchall()
 
     # Get all brands for dropdown (unfiltered)
     cur.execute("SELECT DISTINCT brand FROM products")
+    # cur.execute("SELECT * FROM products WHERE brand=%s", (selected_brand))
     brands = [row[0] for row in cur.fetchall()]
 
     cur.close()
 
     return render_template(
-        'list-product.html',
+        "list-product.html",
         products=products,
         brands=brands,
         selected_brand=selected_brand,
-        search_query=search_query
+        search_query=search_query,
+        sort=sort
     )
+
+# @app.route("/list-products", methods=["GET"])
+# def list_products():
+#     sort = request.form.get(sort)
+#     search_query = request.args.get("q")   # get search term
+#     selected_brand = request.args.get("brand")  # get selected brand
+
+#     cur = mysql.connection.cursor()
+
+#     # Start SQL query
+#     sql = "SELECT * FROM products WHERE 1=1"
+#     params = []
+
+#     # Filter by product name (case-insensitive)
+#     if search_query:
+#         sql += " AND LOWER(name) LIKE %s"
+#         params.append("%" + search_query + "%")
+
+#     # Filter by brand
+#     if selected_brand and  selected_brand != "All":
+#         sql += " AND brand = %s"
+#         params.append(selected_brand)
+#     if sort == "new":
+#         sql += " ORDER BY product_id DESC"
+#     elif sort == "old":
+#         sql += " ORDER BY product_id ASC"
+#     else:
+#         sql += " ORDER BY product_id DESC"
+#     cur.execute(sql, tuple(params))
+#     products = cur.fetchall()
+
+#     # Get all brands for dropdown (unfiltered)
+#     cur.execute("SELECT DISTINCT brand FROM products")
+#     brands = [row[0] for row in cur.fetchall()]
+
+#     cur.close()
+
+#     return render_template(
+#         'list-product.html',
+#         products=products,
+#         brands=brands,
+#         selected_brand=selected_brand,
+#         search_query=search_query
+#     )
 
 
 
