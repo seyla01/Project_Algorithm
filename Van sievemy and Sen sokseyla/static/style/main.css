@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
 }
@@ -31,7 +31,7 @@ body {
 .all {
   background: whitesmoke;
   width: 60%;
-  /* height: 500px; */
+  height: 500px; 
   margin-left: 250px;
   margin-top: 50px;
   padding: 0px 60px;
@@ -109,6 +109,6 @@ body {
 .btn a {
   text-decoration: none;
 
+}  
 
 
-}
